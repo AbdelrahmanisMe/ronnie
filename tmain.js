@@ -112,7 +112,6 @@
                                         for(let i=2;i<24;i+=4){
                                                 let clouds = data.days[x].hours[i].cloudcover;
                                                 let iconess = data.days[x].hours[i].icon;
-                                                console.log(clouds);
                                                 let  imgs_footer = document.getElementById(`${i}`);
                                                 if((iconess ==  "rain" ||"cloudy" || "partly-cloudy-night"||"partly-cloudy-day")&&(clouds > 60)){
                                                         imgs_footer.src = "image/poop.png"; 
