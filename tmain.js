@@ -39,8 +39,6 @@
                 let angle = hoursD-anglehour;
                 if(angle<0){ angle=0-angle }
                 document.querySelector('.angledeg').innerHTML = ` ${(angle)}° deg`;
-                console.log(hour,":=>",minutes);
-                console.log(anglehour);
         }
         function countries() {
                 fetch("./countries.json").then
