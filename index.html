@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="./image/favicons/favicon(1).ico" type="images/x-icon">
+    <title>clock Man</title>
+</head>
+<body class="background">
+    <header class="head">
+        <div class="left">
+            <div class="logo"> Time always runOut?!</div>
+            <div  id="time" class="style"> 00:00:00 AM</div>
+        </div>
+        <div class="right"> Ronnie Can Fly! </div>
+    </header>
+    <main>
+        <div  class="maino">
+            <div class="allclock">
+                <input id="tmo" class="timefield" type="time">
+                <button class="button" onclick="show_angle(this)">Angle</button>
+                <div class="angledeg">180 °deg</div>
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="border"></section>
+            
+            <div class="ronnie">
+                <p class="country">Ontario</span></p>
+                <img id="emoji" class="emo" src="image/goodday.png">
+                <!-- <p class="word">Bad Whether ,dude</p> -->
+                <div class="line">
+                    <p class="col"><img  src="image/wind-speed.png" style="height:45px;"> <span class="wind-speed"  style="font-size: 17px; color: gray; font-style:italic; font-family:fantasy;">15 km/h</span></p>
+                    <p class="col"><img src="image/cloud.png" style="height:40px;"><span class="cloudcover" style="font-size: 17px; color: gray; font-style:italic;font-family:fantasy;">0%</span></p>
+                </div>
+                <div class="butons">
+                    <input  class="design" type="text" placeholder="Type your city">
+                    <select class="ontario" onclick="countries(this)">
+                        <option value=""></option>
+                    </select>
+                </div>    
+                <button  class="ok" onclick="whether(this)">SUBMIT</button>
+                <footer class="foter">
+                    <span class="spa">today</span>
+                    <div class="footer-row">
+                        <div class="info"> 
+                            <span class="clock-footer">02:00 AM</span>
+                            <img id="2" src="image/goodday.png" alt="emoji">
+                        </div>
+                        <div class="info"> 
+                            <span class="clock-footer">06:00 AM</span>
+                            <img id="6" src="image/goodday.png" alt="emoji">
+                        </div>
+                        <div class="info"> 
+                            <span class="clock-footer">10:00 AM</span>
+                            <img id="10" src="image/goodday.png" alt="emoji">
+                        </div>
+                        <div class="info"> 
+                            <span class="clock-footer"> 14:00 PM</span>
+                            <img id="14" src="image/goodday.png" alt="emoji">
+                        </div>
+                        <div class="info"> 
+                            <span class="clock-footer">18:00 PM</span>
+                            <img id="18" src="image/goodday.png" alt="emoji">
+                        </div>
+                        <div class="info"> 
+                            <span class="clock-footer"> 22:00 PM</span>
+                            <img id="22" src="image/goodday.png" alt="emoji">
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+<script src="tmain.js"></script>
+</body>
+</html>
+

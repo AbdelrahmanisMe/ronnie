@@ -1,0 +1,634 @@
+*.html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+::-moz-selection {
+    color: #10001f;
+}
+::selection {
+    color: #10001f;
+}
+.background {
+    background-color:rgb(83, 69, 69);
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 1.2rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family:serif;
+    font-size:1.1rem;
+    color: rgb(207, 129, 11);
+}
+#time{
+    font-family:Arial;
+    font-size:3rem;
+}
+.right{
+    color: white;   
+    font-family:sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-size: 4rem;
+}
+.maino{
+    height: 105vh;
+    width: 98%; 
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.allclock{
+    height: 100vh;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.angledeg{
+    color: wheat;
+    font-size: 1.4rem;
+    margin:10px 0px 20px 15rem;
+}
+.clock{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(image/clock.png);
+    border:4px solid #091921;
+    border-radius: 50%;
+    background-size:cover;
+    box-shadow:0 -10px 10px rgb(255, 255, 255,0.05),
+                inset 0 -10px 10px rgb(255, 255, 255,0.05),
+                0 10px 10px rgba(0,0,0.3),
+                inset 0 10px 10px rgba(0,0,0.3);
+}
+.clock:before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.clock .hour,
+.clock .min
+{
+    position:absolute;
+}
+.clock .hour,.hr{
+    width: 160px;
+    height: 160px;
+}
+.clock  .min,.mn{
+    width: 190px;
+    height: 190px;
+}
+.hr,.mn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    border-radius: 50%;
+}
+.mn{
+    transform: rotateZ(180deg);
+}
+.hr{
+    transform: rotateZ(00deg);
+}
+
+.hr:before{
+    content:'';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background:#ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before{
+    content:'';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background:#fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.timefield{
+    height: 2.1rem;
+    width: 6.8rem;
+    font-family:cursive;
+    font-size:1rem;
+    border:2px solid #ff105e;
+    border-radius: 2rem;
+    padding:0px 1rem;
+}
+
+.button{
+    margin-top:0.4rem;
+    height:2.4rem;
+    width: 6rem;
+    font-family:cursive;
+    font-size: 1.5rem;
+    color: black;
+    border:4px solid pink;
+    border-radius: 10rem;
+}
+.button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.button:focus{
+    border:2px solid palevioletred;
+}
+.border{
+    height: 46vh;
+    border-left:0.2rem solid  tan;
+    margin-top: -12rem;
+}
+.ronnie{
+    height: 92vh;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}
+.emo{
+    margin-bottom: 0.5rem;
+    height: 6rem;
+    width: 6rem;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 17rem;
+}
+.col{
+    display:flex;
+    align-items: center;
+}
+.country{
+    color: #ff105e;
+    font-size: 2rem;
+    font-family:serif;
+    letter-spacing: -2px;
+    font-style: italic;
+}
+.design{
+    height: 2.1rem;
+    width: 9.2rem;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color:white;
+    opacity: 0.3;
+    background: gray;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: -1rem;
+    padding-left: 5px;
+}
+.design:focus{
+    outline:white;
+    color: white;
+    opacity:0.9;
+}
+.ontario{
+    height: 2.4rem;
+    width:7.3rem;
+    font-size: 1.2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color:white;
+    opacity: 0.9;
+    background: gray;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: -1rem;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.ontario:focus{
+    outline:white;
+    color: white;
+}
+.ok{
+    height: 2.4rem;
+    width:8rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    background-color: rgba(252, 136, 4, 0.911);
+    border:rgba(252, 136, 4, 0.911);
+    margin-top: 0.3rem;
+    border-radius: 4px;
+}
+.ok:hover{
+    cursor: pointer;
+}
+
+|*.html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+::-moz-selection {
+    color: #10001f;
+}
+::selection {
+    color: #10001f;
+}
+.background {
+    background-color:rgb(83, 69, 69);
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family:serif;
+    font-size:1.1rem;
+    color: rgb(207, 129, 11);
+}
+#time{
+    font-family:Arial;
+    font-size:3rem;
+
+}
+.right{
+    color: white;   
+    font-family:sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-size: 4rem;
+}
+.maino{
+    height: 105vh;
+    width: 98%; 
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.allclock{
+    height: 100vh;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.angledeg{
+    color: #ff105e;
+    font-size: 1.7rem;
+}
+.clock:before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.clock .hour,
+.clock .min
+{
+    position:absolute;
+}
+.clock .hour,.hr{
+    width: 160px;
+    height: 160px;
+}
+.clock  .min,.mn{
+    width: 190px;
+    height: 190px;
+}
+.hr,.mn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    border-radius: 50%;
+}
+.mn{
+    transform: rotateZ(180deg);
+}
+.hr{
+    transform: rotateZ(00deg);
+}
+
+.hr:before{
+    content:'';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background:#ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn:before{
+    content:'';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background:#fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+.timefield{
+    height: 2.1rem;
+    width: 6.8rem;
+    font-family:cursive;
+    font-size:1rem;
+    border:2px solid #ff105e;
+    border-radius: 2rem;
+    padding:0px 1rem;
+}
+
+.button{
+    margin-top:0.4rem;
+    height:2.4rem;
+    width: 6rem;
+    font-family:cursive;
+    font-size: 1.5rem;
+    color: black;
+    border:4px solid pink;
+    border-radius: 10rem;
+}
+.button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.button:focus{
+    border:2px solid palevioletred;
+}
+.border{
+    height: 46vh;
+    border-left:0.2rem solid  tan;
+    margin-top: -12rem;
+    margin-right: 3rem;
+}
+.ronnie{
+    height: 92vh;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}
+.emo{
+    margin-bottom: 0.5rem;
+    height: 6rem;
+    width: 6rem;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 16rem;
+}
+.col{
+    display:flex;
+    align-items: center;
+}
+.country{
+    color: #ff105e;
+    font-size: 2rem;
+    font-family:serif;
+    letter-spacing: -2px;
+    font-style: italic;
+}
+.design{
+    height: 2.1rem;
+    width:8.5rem;
+    font-size: 1.1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color:white;
+    opacity: 0.3;
+    background: gray;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: -1rem;
+    padding-left: 5px;
+}
+.design:focus{
+    outline:white;
+    color: white;
+    opacity:0.9;
+}
+.ontario{
+    height: 2.4rem;
+    width:9rem;
+    font-size: 1.2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color:white;
+    opacity: 0.9;
+    background: gray;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: -1rem;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.ontario:focus{
+    outline:white;
+    color: white;
+}
+.ok{
+    height: 2.4rem;
+    width:6rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    background-color: rgba(252, 136, 4, 0.911);
+    border:rgba(252, 136, 4, 0.911);
+    margin-top: 0.3rem;
+    border-radius: 4px;
+}
+.ok:hover{
+    cursor: pointer;
+}
+
+.spa{
+    font-size: 1.5rem;
+    font-family: serif;
+    font-style: italic;
+}
+.footer-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 6.2rem;
+    background-color: rgb(145, 108, 108);
+    width: 4rem;
+    border:3px solid black;
+    border-radius: 3rem;
+    margin:0.6rem 0  0  0.5rem;
+    padding-top: 1.6rem;
+}
+.clock-footer{
+    font-size: 0.8rem;
+    color: black;
+    font-style: italic;
+}
+.info img{
+    height:3.5rem ;
+    width: 3.5rem;
+    margin-bottom: 2.7rem;
+    padding-top: 4px;
+}
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+@media(max-height:1200px){
+    .background{
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+}
+@media(max-width:960px)
+{
+    .background {
+        overflow-y:scroll;
+    }
+    .head{
+        margin-top:0.8rem;
+    }
+    .left{
+        font-size:1rem;
+    }
+    #time{
+        font-size:1.8rem;
+    }
+    .right{
+        font-size: 1.1rem;
+    }
+    .maino{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .allclock{
+        margin-top: 1rem;
+    }
+    .angledeg{
+        font-size: 1.4rem;
+        color: wheat;
+        margin:5px 0px 10px 10rem;
+    }
+    .clock{
+        margin-top: 8rem;
+        height: 250px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        align-items: center;
+        background: url(image/clock.png);
+        border:4px solid #091921;
+        border-radius: 50%;
+        background-size:cover;
+        box-shadow:0 -10px 10px rgb(255, 255, 255,0.05),
+                    inset 0 -10px 10px rgb(255, 255, 255,0.05),
+                    0 10px 10px rgba(0,0,0.3),
+                    inset 0 10px 10px rgba(0,0,0.3);
+    }
+    .border{
+        height: 0vh;
+        border-left:0px solid rgb(83, 69, 69);
+    }
+    .ronnie{
+        height: 100vh;
+        width: 42%;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    .emo{
+        margin-bottom: 0.5rem;
+        height: 5rem;
+        width: 5rem;
+    }
+    .line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        width: 15rem;
+    }
+    .butons{
+        display: flex;
+        flex-direction: column;
+    }
+    .country{
+        font-size: 2.5rem;
+    }
+    .design{
+        height: 2.1rem;
+        width: 9.9rem;
+        font-size: 1.2rem;
+        margin-top: -1rem;
+    }
+    .ontario{
+        height: 2.4rem;
+        width:10.6rem;
+        margin-top: 0.1rem;
+        /* padding-left: 5px; */
+    }
+    .ok{
+        margin-bottom: 3rem;
+    }
+    .foter{
+        display: none;
+    }
+}
+
+/* .............................................................................................. */
