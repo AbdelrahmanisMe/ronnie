@@ -1,22 +1,22 @@
 {       
-        const tim = new Date();
-        var hours =tim.getHours();
-        var minute =tim.getMinutes();
-        var seconds =tim.getSeconds();
-        var div=document.getElementById("time");
-        var day_night_or_sunny;
-        var lop = function doooo() {
-        if(hours<12){
-                day_night_or_sunny = "AM";
-        }
-        else if(hours>12){
-                day_night_or_sunny = "PM";
-        }
-        else {
-                day_night_or_sunny = "PM";
-        }
-        div.innerHTML = " " + hours + ":" + minute + ":" + seconds + " " + day_night_or_sunny;
-        }
+           setInterval(() => {
+                        const tim = new Date();
+                        var hours =tim.getHours();
+                        var minute =tim.getMinutes();
+                        var seconds =tim.getSeconds();
+                        var div=document.getElementById("time");
+                        var day_night_or_sunny;
+                        if(hours<12){
+                                day_night_or_sunny = "AM";
+                        }
+                        else if(hours>12){
+                                day_night_or_sunny = "PM";
+                        }
+                        else {
+                                day_night_or_sunny = "PM";
+                        }
+                        div.innerHTML = " " + hours + ":" + minute + ":" + seconds + " " + day_night_or_sunny;
+                }, 1000);
         function  show_angle() {
                 const allTime = document.querySelector("#tmo").value;
                 let hour = parseInt(allTime[0]+allTime[1]);
