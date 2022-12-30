@@ -82,12 +82,12 @@
                 function api(input_city,country){
                         if(input_city !== "" && country == "" ){
                                 document.querySelector(".country").textContent = input_city;
-                                get_data =  fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input_city}?unitGroup=metric&key=9HD89P9L6T4LJNBX2SCT7MS34&contentType=json`);
+                                get_data =  fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${input_city}?unitGroup=metric&key=CLD43PMQFQHWHYV6T3FXS7GC7&contentType=json`);
                                 return get_data;
                         }
                         else if(country != "" && input_city ===  ""){
                                 document.querySelector(".country").textContent = country;
-                                get_data =  fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${country}?unitGroup=metric&key=9HD89P9L6T4LJNBX2SCT7MS34&contentType=json`);
+                                get_data =  fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${country}?unitGroup=metric&key=CLD43PMQFQHWHYV6T3FXS7GC7&contentType=json`);
                                 return get_data;
                         }
                 }
