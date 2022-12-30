@@ -60,6 +60,11 @@
                 }
                 );
         }
+        function count_requests(status,statusText){
+                if(status === 429 && statusText === "Too Many Requests" ){
+                        document.querySelector('.ok').onclick = "";
+                }
+        }
         function whether() {
                 var get_data;
                 var input_city = document.querySelector(".design").value; 
@@ -88,8 +93,11 @@
                 }
                 api(input_city,country);
                 // ---------------------------------------------
-                get_data.then(response =>{return response.json()})
-                .then(data =>   
+                 get_data.then(response =>{
+                        count_requests(response.status,response.statusText);
+                        return response.json();
+                }
+                ).then(data =>   
                 {
                                 let  wind = document.querySelector(".wind-speed");
                                 let cloud = document.querySelector(".cloudcover");
@@ -126,8 +134,8 @@
                                 }
                 // -------------------------------------------------------
                 }
-                ).catch(err => {
-                        console.error(err);}
+                      ).catch(err => {
+                            console.error(err);}
                 );
         }
         setInterval(lop,1);
