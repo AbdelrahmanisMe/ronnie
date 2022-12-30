@@ -138,5 +138,4 @@
                             console.error(err);}
                 );
         }
-        setInterval(lop,1);
 }
